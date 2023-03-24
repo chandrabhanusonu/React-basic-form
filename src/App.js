@@ -23,15 +23,15 @@ function App() {
   // console.log(formData.firstName);
   // console.log(formData.lastName);
   // console.log(formData.email);
-    //  console.log(formData);
+     console.log(formData);
 
   function changeHandler(event){
-    const {name,value,checkbox,type} = event.target;
+    const {name,value,checked,type} = event.target;
     setFormData(prevFormData => {
       return{
         ...prevFormData,
         // [event.target.name]: event.target.value
-        [name] : type==="checkbox" ? checkbox : value,
+        [name]:type==="checkbox"?checked: value
       }
     });
   }
